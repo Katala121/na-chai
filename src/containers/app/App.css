@@ -1,0 +1,45 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.left-side_panel {
+  width: 305px;
+  background: #fff;
+  -webkit-box-shadow: 0 0 20px rgb(13 62 119 / 4%);
+  box-shadow: 0 0 20px rgb(13 62 119 / 4%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  height: 100%;
+  min-height: 100vh;
+  display: inline-block;
+}
+
+.right-side_panel {
+  width: 100%;
+  background: #fafbfb;
+  padding: 0 35px;
+}
+
+@media (max-width: 767.98px) {
+
+  .App {
+    display: block;
+  }
+
+}
+
+@media (max-width: 767.98px) {
+
+  .left-side_panel {
+    width: 100%;
+    min-height: 0;
+  }
+
+}

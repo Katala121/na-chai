@@ -1,0 +1,135 @@
+.settings_page {
+  padding-bottom: 30px;
+}
+
+.settings_page h1 {
+  margin-bottom: 29px;
+  font-size: calc(24px + 8 * ((100vw - 320px)/ 1060));
+  font-weight: 300;
+  line-height: 40px;
+  text-align: start;
+}
+
+.settings-page__grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  margin-bottom: 4px;
+}
+
+.settings-page__left-part {
+  width: 460px;
+  display: inline-block;
+  max-width: 100%;
+  margin-right: 130px;
+}
+
+.settings-page__right-part {
+  width: 460px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  max-width: 100%;
+  height: 100%;
+}
+
+.settings-page__images-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 44px;
+}
+
+.file-upload-wrap {
+  width: 45%;
+  position: relative;
+  text-align: center;
+}
+
+.file-upload-wrap__title {
+  font-weight: 700;
+  line-height: 18px;
+  color: #000;
+  margin-bottom: 2px;
+}
+
+.file-upload-wrap__current-image-wrap {
+  margin: 0 auto;
+  width: 120px;
+  height: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 11px;
+  border-radius: 50%;
+  background: #8d9c9f;
+}
+
+.file-upload-wrap__current-image-wrap img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.file-upload-input-wrap {
+  cursor: pointer;
+  position: absolute;
+  right: 37px;
+  bottom: -6px;
+}
+
+.file-upload-wrap__file-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+@media (max-width: 1736px) {
+
+  .settings-page__grid {
+    flex-direction: column;
+  }
+
+}
+
+@media (max-width: 1404px) {
+
+  .settings-page__left-part {
+    width: 100%;
+    margin-right: 0;
+  }
+
+} 
+
+@media (max-width: 1404px) {
+
+  .settings-page__right-part {
+    width: 100%;
+  }
+  
+}

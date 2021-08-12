@@ -1,0 +1,48 @@
+.nav_menu__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.nav_menu__item a {
+  width: 305px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 16px 24px;
+  position: relative;
+}
+
+.nav_menu__item img {
+  margin-right: 22px;
+}
+
+.nav_menu__item span {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #231f20;
+}
+
+.checked::before {
+  /* border-left: 4px solid #1774e2;
+  background: #f6f6f6; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  content: '';
+  background: #1774e2;
+}
+
+.active {
+  background: #f6f6f6;
+}
+
+.nav_menu__item a:hover {
+  background: #f6f6f6;
+  cursor: pointer;
+}
