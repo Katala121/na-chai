@@ -6,6 +6,16 @@
   min-height: 100vh;
 }
 
+body {
+  font-family: roboto-oh5,sans-serif;
+  font-size: 14px;
+  line-height: 1.65;
+  color: #231f20;
+  min-width: 320px;
+  position: relative;
+  overflow-x: hidden;
+}
+
 .left-side_panel {
   width: 305px;
   background: #fff;
