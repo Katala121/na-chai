@@ -39,7 +39,7 @@ const useStyles = makeStyles({
   },
 });
 
-const InputField = ({label, placeholder}) => {
+const InputField = ({label, placeholder, required}) => {
 
   const classes = useStyles();
 
@@ -47,7 +47,7 @@ const InputField = ({label, placeholder}) => {
     <div className={classes.root}>
       <InputLabel htmlFor="validation-outlined-input">{label}</InputLabel>
       <InputBase
-        required
+        required={required ? true : false}
         variant="outlined"
         id="validation-outlined-input"
         placeholder={placeholder}

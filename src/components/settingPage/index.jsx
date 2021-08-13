@@ -7,15 +7,15 @@ const SettingsPage = () => {
   return (
     <div className="settings_page">
       <h1>Настройки</h1>
-      <div className="settings-form">
+      <form action="" className="settings-form">
         <div className="settings-page__grid">
           <div className="settings-page__left-part">
-            <InputField label="Название заведения *" placeholder="Не заполнено"/>
-            <InputField label="Тип заведения *" placeholder="Не заполнено"/>
-            <InputField label="Сайт заведения *" placeholder="Не заполнено"/>
-            <InputField label="Адрес заведения *" placeholder="Не заполнено"/>
-            <InputField label="Телефон заведения *" placeholder="+ 7"/>
-            <InputField label="E-mail заведения *" placeholder="Не заполнено"/>
+            <InputField label="Название заведения *" placeholder="Не заполнено" required/>
+            <InputField label="Тип заведения *" placeholder="Не заполнено" required/>
+            <InputField label="Сайт заведения" placeholder="Не заполнено"/>
+            <InputField label="Адрес заведения" placeholder="Не заполнено"/>
+            <InputField label="Телефон заведения" placeholder="+ 7"/>
+            <InputField label="E-mail заведения" placeholder="Не заполнено"/>
           </div>
           <div className="settings-page__right-part">
             <div className="settings-page__images-grid">
@@ -44,14 +44,14 @@ const SettingsPage = () => {
                 </label>
               </div>
             </div>
-            <InputField label="Имя *" placeholder="Не заполнено"/>
-            <InputField label="Фамилия *" placeholder="Не заполнено"/>
-            <InputField label="Телефон *" placeholder="+ 7"/>
-            <InputField label="E-mail *" placeholder="Не заполнено"/>
+            <InputField label="Имя *" placeholder="Не заполнено" required/>
+            <InputField label="Фамилия *" placeholder="Не заполнено" required/>
+            <InputField label="Телефон *" placeholder="+ 7" required/>
+            <InputField label="E-mail *" placeholder="Не заполнено" required/>
           </div>
         </div>
         <ButtonSubmit />
-      </div>
+      </form>
     </div>
   )
 }

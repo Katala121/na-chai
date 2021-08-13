@@ -6,6 +6,13 @@
   min-height: 100vh;
 }
 
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
 body {
   font-family: roboto-oh5,sans-serif;
   font-size: 14px;
@@ -14,6 +21,7 @@ body {
   min-width: 320px;
   position: relative;
   overflow-x: hidden;
+  margin: 0;
 }
 
 .left-side_panel {
@@ -34,7 +42,20 @@ body {
 .right-side_panel {
   width: 100%;
   background: #fafbfb;
-  padding: 0 35px;
+}
+
+.no-mw .container {
+  max-width: none;
+}
+
+*, ::after, ::before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 100%;
+  padding: 0 35px;  
 }
 
 @media (max-width: 767.98px) {
@@ -47,7 +68,7 @@ body {
 
 @media (max-width: 767.98px) {
 
-  .left-side_panel {
+  .left-side_panel, .nav_menu__item a {
     width: 100%;
     min-height: 0;
   }
