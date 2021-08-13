@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/na-chai/static/css/main.24c8c1ac.chunk.css",
+    "main.css": "/na-chai/static/css/main.0ae40b66.chunk.css",
     "main.js": "/na-chai/static/js/main.848d52b1.chunk.js",
     "main.js.map": "/na-chai/static/js/main.848d52b1.chunk.js.map",
     "runtime-main.js": "/na-chai/static/js/runtime-main.96ade5df.js",
@@ -10,13 +10,13 @@
     "static/js/3.1317f6be.chunk.js": "/na-chai/static/js/3.1317f6be.chunk.js",
     "static/js/3.1317f6be.chunk.js.map": "/na-chai/static/js/3.1317f6be.chunk.js.map",
     "index.html": "/na-chai/index.html",
-    "static/css/main.24c8c1ac.chunk.css.map": "/na-chai/static/css/main.24c8c1ac.chunk.css.map",
+    "static/css/main.0ae40b66.chunk.css.map": "/na-chai/static/css/main.0ae40b66.chunk.css.map",
     "static/js/2.6b1bb999.chunk.js.LICENSE.txt": "/na-chai/static/js/2.6b1bb999.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.96ade5df.js",
     "static/js/2.6b1bb999.chunk.js",
-    "static/css/main.24c8c1ac.chunk.css",
+    "static/css/main.0ae40b66.chunk.css",
     "static/js/main.848d52b1.chunk.js"
   ]
 }
