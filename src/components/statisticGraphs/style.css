@@ -1,0 +1,12 @@
+.chartjs_hidden_iframe {
+  display: block;
+  overflow: hidden;
+  border: 0px;
+  margin: 0px;
+  inset: 0px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  pointer-events: none;
+  z-index: -1;
+}

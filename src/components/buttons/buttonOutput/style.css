@@ -1,0 +1,14 @@
+.statistic_page__get_money {
+  width: 335px;
+  max-width: 100%;
+  margin-left: 13px;
+}
+
+@media (max-width: 1736px) {
+
+  .statistic_page__get_money {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+}

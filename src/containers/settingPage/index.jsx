@@ -1,6 +1,6 @@
 import React from 'react';
-import ButtonSubmit from '../buttons/buttonSubmit';
-import InputField from '../inputField';
+import ButtonSubmit from '../../components/buttons/buttonSubmit';
+import InputField from '../../components/inputField';
 import './style.css';
 
 const SettingsPage = () => {

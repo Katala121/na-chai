@@ -1,0 +1,178 @@
+.statistic_page__balance {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 1736px) {
+
+  .statistic_page__balance {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+}
+
+@media (max-width: 1404px) {
+
+  .statistic_page__balance {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: .5rem;
+}
+
+h1 {
+  font-size: calc(24px + 8 * ((100vw - 320px)/ 1060));
+  font-weight: 300;
+  line-height: 40px;
+}
+
+@media (max-width: 1404px) {
+
+  .statistic_page__balance>* {
+    margin-bottom: 20px;
+  }
+
+}
+
+.statistic_page__money_actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media (max-width: 1736px) {
+
+  .statistic_page__money_actions {
+    display: block;
+  }
+
+}
+
+.statistic_page__money_amount {
+  margin-right: 26px;
+}
+
+@media (max-width: 1736px) {
+
+  .statistic_page__money_amount {
+    margin-right: 0;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+}
+
+.money_amount__title {
+  font-size: 16px;
+  line-height: 19px;
+  color: #435a64;
+  margin-bottom: 6px;
+}
+
+.money_amount__number_wrap {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
+  color: #435a64;
+}
+
+.statistic_page__date_wrap {
+  width: 270px;
+}
+
+.date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+@media (max-width: 1736px) {
+
+  .statistic_page__date_wrap {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+}
+
+.date_wrap {
+  display: none;
+  margin: 0 50px 0 30px;
+}
+
+.date.active .date_wrap {
+  display: block;
+}
+
+input, textarea {
+  outline: 0;
+}
+
+.date__date {
+  cursor: pointer;
+  width: 63px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 12px;
+  line-height: 20px;
+  height: 40px;
+  border: none;
+  background: 0 0;
+  color: #000;
+}
+
+.date__choose_button {
+  border-radius: 3px;
+  background: #fafbfb;
+  -webkit-transition: all .3s ease 0s;
+  -o-transition: all .3s ease 0s;
+  transition: all .3s ease 0s;
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 1px solid transparent;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
