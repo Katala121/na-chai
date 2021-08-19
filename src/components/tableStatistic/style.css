@@ -1,8 +1,20 @@
 .statistic_table__wrap {
   margin-top: 11px;
+  display: block;
+  width: 100%;
+}
+
+.statistic_table__manager_wrap {
   overflow-x: auto;
   overflow-y: hidden;
   width: 100%;
+}
+
+.statistic_table__manager_wrap table {
+  background: #fff;
+  border-radius: 6px 0 0 6px;
+  width: 100%;
+  min-width: 1300px;
 }
 
 .settings_icon:hover {

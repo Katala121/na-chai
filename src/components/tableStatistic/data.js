@@ -3,30 +3,37 @@ export const data = {
     {
       id: 1,
       name: 'Сотрудник',
+      sortField: 'name',
     },
     {
       id: 2,
       name: 'Сумма чаевых',
+      sortField: 'summTips',
     },
     {
       id: 3,
       name: 'Рейтинг',
+      sortField: 'rating',
     },
     {
       id: 4,
       name: 'Отзывов',
+      sortField: 'feedbacks',
     },
     {
       id: 5,
       name: 'Положительных',
+      sortField: 'good',
     },
     {
       id: 6,
       name: 'Отрицательных',
+      sortField: 'bad',
     },
     {
       id: 7,
       name: 'Средняя сумма чаевых',
+      sortField: 'averageTipAmount',
     },
   ],
   data: [
@@ -81,7 +88,7 @@ export const data = {
       averageTipAmount: '160,00 руб.',
     },
     {
-      id: 4,
+      id: 6,
       name: 'Сергей Иванович',
       summTips: '1000,00 руб.',
       rating: '4,0',

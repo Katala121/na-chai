@@ -1,0 +1,85 @@
+.popup__body {
+  /* -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: all .3s ease 0s;
+  -o-transition: all .3s ease 0s;
+  transition: all .3s ease 0s; */
+  background-color: #fff;
+  padding: 35px 27px 20px;
+  width: 100%;
+  max-width: 375px;
+  -webkit-box-shadow: 0 0 20px rgb(13 62 119 / 4%);
+  box-shadow: 0 0 20px rgb(13 62 119 / 4%);
+}
+
+.popup__header {
+  text-align: center;
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 40px;
+  margin-bottom: 22px;
+}
+
+.popup_get_money__description {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #435a64;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.popup_get_money__saved_methods {
+  text-align: center;
+}
+
+.popup_get_money__saved_cards_list {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.popup_get_money__add_link {
+  text-align: center;
+  color: #000;
+  margin: 0 auto;
+  display: inline-block;
+  text-decoration: underline;
+}
+
+.popup_get_money__balance_wrap {
+  margin: 64px 0 20px;
+  text-align: center;
+}
+
+.popup_get_money__balance_title {
+  font-size: 14px;
+  line-height: 17px;
+  color: #8e9ca2;
+  margin-right: 7px;
+}
+
+.popup_get_money__balance {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+  color: #435a64;
+}
+
+.popup_form__submit_btn {
+  border-radius: 41px;
+  display: block;
+  width: 100%;
+}

@@ -122,13 +122,25 @@ h1 {
 
 }
 
+.date-input {
+  background-color: inherit;
+  border: none;
+}
+
 .date_wrap {
   display: none;
   margin: 0 50px 0 30px;
 }
 
-.date.active .date_wrap {
-  display: block;
+.date_wrap span {
+  margin: 0 5px;
+}
+
+.date .active {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: inherit;
 }
 
 input, textarea {

@@ -12,15 +12,15 @@ const data = [
 
 const Graphs = () => {
   return (
-    // <ResponsiveContainer>
-    <LineChart width={534} height={117} data={data} margin={{ top: 0, right: 30, left: 0, bottom: 0 }}>
-      <Line type="monotone" dataKey="Сумма переводов по дням" stroke="dodgerblue" />
-      <CartesianGrid stroke="#ccc" vertical={false} />
-      <XAxis dataKey="name" />
-      <YAxis />
-      <Tooltip />
-    </LineChart>
-    // </ResponsiveContainer>
+    <ResponsiveContainer width="100%" height={200}>
+      <LineChart data={data} margin={{ top: 0, right: 30, left: 0, bottom: 0 }}>
+        <Line type="monotone" dataKey="Сумма переводов по дням" stroke="dodgerblue" />
+        <CartesianGrid stroke="#ccc" vertical={false} />
+        <XAxis dataKey="name" />
+        <YAxis />
+        <Tooltip />
+      </LineChart>
+    </ResponsiveContainer>
   )
 }
 

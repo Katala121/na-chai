@@ -12,7 +12,7 @@ import Popover from '@material-ui/core/Popover';
 import { makeStyles } from '@material-ui/core/styles';
 import { TableSortLabel } from '@material-ui/core';
 
-const useStyles = makeStyles((theme) => ({
+const useStylesIcon = makeStyles((theme) => ({
   popover: {
     pointerEvents: 'none',
   },
@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const SettingsIcon = () => {
-  const classes = useStyles();
+  const classes = useStylesIcon();
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handlePopoverOpen = (event) => {
@@ -47,7 +47,6 @@ const SettingsIcon = () => {
         classes={{
           paper: classes.paper,
         }}
-        onM
         open={open}
         anchorEl={anchorEl}
         anchorOrigin={{
@@ -68,11 +67,83 @@ const SettingsIcon = () => {
   )
 }
 
+const useStyles = makeStyles((theme) => ({
+  root: {
+    width: '100%',
+  },
+  paper: {
+    width: '100%',
+    marginBottom: theme.spacing(2),
+  },
+  table: {
+    minWidth: 1300,
+    '& .MuiTableRow-head .MuiTableCell-root': {
+      borderBottom: '2px solid #f6f6f6',
+      '&:hover': {
+        cursor: 'pointer',
+      },
+    },
+    '& .MuiTableCell-root': {
+      borderBottom: 'none',
+      borderRight: '1px solid #f6f6f6',
+    },
+  },
+  visuallyHidden: {
+    border: 0,
+    clip: 'rect(0 0 0 0)',
+    height: 1,
+    margin: -1,
+    overflow: 'hidden',
+    padding: 0,
+    position: 'absolute',
+    top: 20,
+    width: 1,
+  },
+}));
+
 const TableStatistic = () => {
+  const classes = useStyles();
+
+  const [orderBy, setOrderBy] = React.useState(null);
+  const [order, setOrder] = React.useState('asc');
+
+  const handleRequestSort = (event, property) => {
+    const isAsc = orderBy === property && order === 'asc';
+    setOrder(isAsc ? 'desc' : 'asc');
+    setOrderBy(property);
+  };
+
+  const descendingComparator = (a, b, orderBy) => {
+    if (b[orderBy] < a[orderBy]) {
+      return -1;
+    }
+    if (b[orderBy] > a[orderBy]) {
+      return 1;
+    }
+    return 0;
+  }
+
+  const getComparator = (order, orderBy) => {
+    return order === 'desc'
+    ? (a, b) => descendingComparator(a, b, orderBy)
+    : (a, b) => -descendingComparator(a, b, orderBy);
+  }
+
+  const stableSort = (array, comparator) => {
+    const stabilizedThis = array.map((el, index) => [el, index]);
+    stabilizedThis.sort((a, b) => {
+      const order = comparator(a[0], b[0]);
+      if (order !== 0) return order;
+      return a[1] - b[1];
+    });
+    return stabilizedThis.map((el) => el[0]);
+  }
+
   return (
     <div className="statistic_table__wrap">
+      <div className="statistic_table__manager_wrap">
       <TableContainer>
-        <Table>
+        <Table className={classes.table}>
           <TableHead>
             <TableRow>
               <TableCell>
@@ -80,16 +151,18 @@ const TableStatistic = () => {
               </TableCell>
               {
                 data.columns.map(column => (
-                  <TableCell key={column.id}>
+                  <TableCell
+                  key={column.id}
+                  sortDirection={orderBy === column.name ? order : false}
+                  onClick={(e) => handleRequestSort(e, column.sortField)}
+                  >
                     {column.name}
                     <TableSortLabel
-                      active={orderBy === headCell.id}
-                      direction={orderBy === headCell.id ? order : 'asc'}
-                      onClick={createSortHandler(headCell.id)}
-                    >
-                    {headCell.label}
-                    {orderBy === headCell.id ? (
-                    <span className={classes.visuallyHidden}>
+                      active={orderBy === column.sortField}
+                      direction={orderBy === column.sortField ? order : 'asc'}
+                      >
+                    {orderBy === column.name ? (
+                      <span className={classes.visuallyHidden}>
                           {order === 'desc' ? 'sorted descending' : 'sorted ascending'}
                         </span>
                       ) : null}
@@ -101,7 +174,7 @@ const TableStatistic = () => {
           </TableHead>
           <TableBody>
             {
-              data.data.map(row => (
+              stableSort(data.data, getComparator(order, orderBy)).map(row => (
                 <TableRow key={row.id}>
                   <TableCell>
                     <SettingsIcon />
@@ -119,6 +192,7 @@ const TableStatistic = () => {
           </TableBody>
         </Table>
       </TableContainer>
+      </div>
     </div>
   )
 }
