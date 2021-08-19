@@ -14,9 +14,12 @@ const useStyles = makeStyles({
     '& .MuiDialog-paperWidthSm': {
       maxWidth: 375,
     },
+    '& .MuiFormControl-root': {
+      width: '100%',
+    },
   },
   formControl: {
-    minWidth: 320,
+    // minWidth: 320,
     marginBottom: 11,
   },
 });
