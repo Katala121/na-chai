@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -54,8 +54,16 @@ body {
 }
 
 .container {
-  max-width: 100%;
+  width: 100%;
   padding: 0 35px;  
+}
+
+@media (max-width: 1669px) {
+
+  .container {
+    max-width: calc(100% - 305px);
+  }
+  
 }
 
 @media (max-width: 767.98px) {
@@ -64,9 +72,9 @@ body {
     display: block;
   }
 
-}
-
-@media (max-width: 767.98px) {
+  .container {
+    max-width: none;
+  }
 
   .left-side_panel, .nav_menu__item a {
     width: 100%;

@@ -1,0 +1,45 @@
+.pos_page {
+  width: 1212px;
+  max-width: 100%;
+}
+
+@media (max-width: 1266px) {
+
+  .pos_page {
+    width: auto;
+  }
+
+}
+
+.pos_page__header {
+  margin-bottom: 24px;
+}
+
+h1 {
+  font-size: calc(24px + 8 * ((100vw - 320px)/ 1060));
+  font-weight: 300;
+  line-height: 40px;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.pos_page__description {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  color: #111;
+  margin-bottom: 24px;
+}
+
+.pos_page__select_wrap {
+  margin-bottom: 33px;
+}
+
+.pos_page__select_title {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 23px;
+}
